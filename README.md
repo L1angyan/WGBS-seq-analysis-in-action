@@ -1,1 +1,1 @@
-# BS-seq-analysis-in-action
+# WGBS-seq-analysis-in-action
