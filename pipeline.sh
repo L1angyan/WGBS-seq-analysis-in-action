@@ -10,3 +10,11 @@ bismark --genome ~/b73V4/ --non_directional -1 S1-2-Mu_R1.fq.gz -2 S1-2-Mu_R2.fq
 bismark --genome ~/b73V4/ --non_directional -1 S1-2-Wt_R1.fq.gz -2 S1-2-Wt_R2.fq.gz -p 2 -o ./
 # mapping
 # non_directional library
+
+for i in *.sam.gz;do 
+name=${i%.sam*}
+gunzip $i
+samtools view -@ 2 -b ${name}.sam > ${name}.bam
+done
+#unzip
+#trans sam2bam
