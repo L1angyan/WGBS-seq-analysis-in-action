@@ -18,3 +18,6 @@ samtools view -@ 2 -b ${name}.sam > ${name}.bam
 done
 #unzip
 #trans sam2bam
+
+deduplicate_bismark --bam S1-2-Wt_R1_bismark_bt2_pe.bam &
+deduplicate_bismark --bam S1-2-Mu_R1_bismark_bt2_pe.bam
